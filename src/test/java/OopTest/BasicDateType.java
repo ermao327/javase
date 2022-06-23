@@ -9,16 +9,16 @@ package OopTest;
 //swap和main是两个独立的栈空间，swap中的ab发生交换（形参），不影响main中的ab（实参）。
 public class BasicDateType {
     public static void main(String[] args) {
-        int a=10,b=20;
+        String a="10",b="20";
         basicType basicType=new basicType();
         basicType.swap(a, b);
         System.out.println("a="+a+"b="+b);
     }
 }
 class basicType{
-    public void swap(int a,int b){
+    public void swap(String a,String b){
         System.out.println("交换前"+"a="+a+"b="+b);
-        int temp=a;
+        String temp=a;
         a=b;
         b=temp;
         System.out.println("交换后"+"a="+a+"b="+b);
